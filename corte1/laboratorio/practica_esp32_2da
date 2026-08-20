@@ -1,0 +1,17 @@
+#parpadea 10 veces y disminuye un segundo
+
+from machine import Pin
+from time import sleep
+
+led = Pin(2,Pin.OUT)
+
+tiempo = 10
+
+for i in range (10):
+    led.on()
+    sleep(tiempo)
+    
+    led.off()
+    sleep(tiempo)
+    
+    tiempo=tiempo-1
