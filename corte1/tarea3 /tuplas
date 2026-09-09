@@ -1,1 +1,99 @@
-cod
+#################LISTAS####################
+###########################################
+my_lista = ['Rojo', 'Azul', 'Amarillo', 'Naranja', 'Violeta', 'Verde']
+#input()
+print(my_lista)                 #Imprime todos los elementos de la lista
+print(type(my_lista))           #Muestra el tipo de dato de la variable
+print(my_lista[2])              #Muestra el elemento que está en la posición 2
+
+print("my_lista size: ", len(my_lista))    #Muestra la cantidad de elementos de la lista
+print(my_lista[0:2])            #Muestra los elementos desde la posición 0 hasta la 1
+print(my_lista[:2])             #Muestra los primeros elementos hasta la posición 1
+
+my_lista.append('Blanco')      #Agrega un elemento al final de la lista
+print(my_lista)
+
+my_lista.insert(3, 'Negro')    #Agrega un elemento en la posición indicada
+print(my_lista)
+
+
+my_lista.extend(['Marron', 'Gris'])   #Agrega varios elementos a la lista
+print(my_lista)
+
+print(my_lista.index('Azul'))          #Muestra la posición donde se encuentra "Azul"
+
+#my_lista.remove('Magenta')
+my_lista.remove('Marron')              #Elimina el elemento indicado de la lista
+print(my_lista)
+
+my_lista.insert(8, 'Marron')           #Agrega "Marron" en la posición 8
+print(my_lista)
+
+print(my_lista.pop())                  #Elimina y muestra el último elemento de la lista
+size = len(my_lista)                   #Guarda en size la cantidad de elementos
+print("size = ", size)
+#print(my_lista.pop(size))
+
+my_lista_3 = my_lista*3                 #Repite la lista 3 veces
+print("my_lista_3: ", my_lista_3)
+
+print("Sort:")
+print()
+my_listaSort = my_lista.sort()         #Ordena la lista de menor a mayor
+print(my_listaSort)                    #Muestra None porque sort() modifica la lista directamente
+
+my_NumList = [10, 9, 8, 7, 6 , 5 , 4, 3, 2, 1]
+print("Ordering my_NumList: ")
+my_NumList.sort()                      #Ordena los números de menor a mayor
+print(my_NumList)
+#OrderedLList = my_NumList.sort()
+#print(my_listaSort)
+
+#Ordenando lista de mayor a menor
+my_NumList.sort(reverse = True)        #Ordena los números de mayor a menor
+print("De mayor a menor: ", my_NumList)
+
+
+
+#################TUPLAS####################
+###########################################
+#Corresponde a una estructura similar a las listas, pero no se puede modificar una vez creada
+
+#Convertir una lista a tupla
+print("###########################")
+print("###########################")
+print("###########################")
+print("############TUPLAS#########")
+my_tupla = tuple(my_lista)             #Convierte la lista en una tupla
+print()
+print()
+print("my_tuple: ", my_tupla)
+
+print(my_tupla[0])                     #Muestra el elemento que está en la posición 0
+print(my_tupla[2])                     #Muestra el elemento que está en la posición 2
+
+
+#Evaluar si un elemento está contenido en la tupla
+print('Rojo' in my_tupla)               #Comprueba si "Rojo" está dentro de la tupla
+print(my_tupla.count('Rojo'))           #Cuenta cuántas veces aparece "Rojo" en la tupla
+
+#Tupla con un solo elemento
+my_tupla_unitaria = ('Blanco')          #Guarda "Blanco" en una variable
+print(my_tupla_unitaria)
+
+#Empaquetado de tupla, tupla sin paréntesis
+my_tupla = 'Gaspar', 5, 8, 1999        #Crea una tupla sin necesidad de usar paréntesis
+print(my_tupla)
+
+#Desempaquetado de tupla, se guardan los valores en orden de las variables
+nombre, dia, mes, año = my_tupla       #Guarda cada valor de la tupla en una variable diferente
+print(nombre)
+print(dia)
+print(mes)
+print(año)
+
+print("Nombre: ", nombre, " - Dia:", dia, " - Mes: ", mes, "- Año: ", año)  #Muestra todos los datos juntos
+
+#Convertir una tupla en una lista
+my_lista2=list(my_tupla)               #Convierte la tupla nuevamente en una lista
+print(my_lista2)
